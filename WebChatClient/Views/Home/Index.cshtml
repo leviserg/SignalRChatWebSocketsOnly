@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "WebSocket chat";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+<div class="container container-fluid">
+    <div class="row py-2 my-2">
+        <div class="col-md-6">
+            State :<span id="conState" class="mx-2">Disconnected</span>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group">
+                <input id="name" class="form-control" placeholder="Anonymous" type="text"/>
+                <button class="btn btn-primary form-control-append mr-2" style="width:240px" id="connectButton" onclick="connect()">Connect</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+@*            <div style="width:100%; height:200px" id="messages-content"></div>*@
+            <textarea style="width:100%; height:400px" id="messages-content"></textarea>
+        </div>
+    </div>
+    <div class="row py-3 my-3">
+        <div class="col-md-12">
+            <div class="input-group">
+                <input id="message" class="form-control" type="text"/>
+                <button class="btn btn-primary form-control-append mr-2" style="width:240px" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/js/webchatclient.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+}
